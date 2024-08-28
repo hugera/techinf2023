@@ -43,8 +43,15 @@
   - O comando git log exibe instantâneos que receberam commit. Ele permite que você liste e filtre o histórico do projeto e pesquise alterações específicas.
 
 
-    
+## Instalando o GitHub
+ - link do site: https://git-scm.com/downloads 
 
+##  Cloando o Repositório
 
+- comando cd / depois cd desktop
+
+- depois cola no terminal: https://github.com/hugera/techinf2023.git
+
+- a seguir o comando: code.
 
 
