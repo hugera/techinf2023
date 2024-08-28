@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Verificar Palíndromo</title>
+</head>
+<body>
+    <h1>Verificar se uma String é um Palíndromo</h1>
+    <p><cite>Escreva um programa que verifica se uma string é um palíndromo.</cite></p>
+
+    <script>
+       function ePalindromo(str) {
+       let strInvertida = str.split('').reverse().join(''); // Inverter a string
+       return str === strInvertida; // Comparar a string original com a invertida
+}
+
+console.log(ePalindromo("racecar")); 
+console.log(ePalindromo("hello")); 
+console.log(ePalindromo("madam")); 
+        
+    </script>
+
+    <script>
+        let strInvertida = prompt("Informe uma string:");
+        document.write(`A string "${entradaUsuario}" ${resultado ? "é" : "não é"} um palíndromo.`);
+    </script>
+</body>
+</html>

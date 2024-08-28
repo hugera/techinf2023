@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calcular Média do Array</title>
+</head>
+<body>
+    <h1>Calcular a Média dos Números de um Array</h1>
+    <p><cite>Escreva um programa que calcula a média dos números em um array.</cite></p>
+
+    <script>
+        function calcularMedia(array) {
+            if (array.length === 0) return 0;  /*Verifica se o array não está vazio*/
+            
+            /*Usa o método reduce para somar os elementos e depois divide pelo número de elementos*/
+            let soma = array.reduce((acumulador, valorAtual) => acumulador + valorAtual, 0);
+            return soma / array.length;
+        }
+        console.log(calcularMedia([1, 2, 3, 4, 5]));          
+        console.log(calcularMedia([10, 20, 30, 40, 50]));    
+        console.log(calcularMedia([5, 5, 5, 5, 5]));         
+    </script>
+    <script>
+        let entradaArray = prompt("Informe os números do array separados por vírgula (por exemplo: 1,2,3,4,5):");
+        let array = entradaArray.split(",").map(Number);
+        let resultado = calcularMedia(array);
+        document.write(`A média dos números no array [${array}] é ${resultado}.`);
+    </script>
+</body>
+</html>

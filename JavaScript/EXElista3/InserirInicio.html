@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inserir Elemento no Início do Array</title>
+</head>
+<body>
+    <h1>Inserir um Novo Elemento no Início de um Array</h1>
+    <p><cite>Escreva um programa que insere um novo elemento no início de um array.</cite></p>
+
+    <script>
+        function inserirNoInicio(array, elemento) {
+            array.unshift(elemento);  /* Usa o método unshift para adicionar um novo elemento no início do array*/
+            return array;
+        }
+        console.log(inserirNoInicio([1, 2, 3, 4, 5], 6));         
+        console.log(inserirNoInicio(["a", "b", "c"], "d"));       
+        console.log(inserirNoInicio([10], 20));                    
+    </script>
+
+    <script>
+        let entradaArray = prompt("Informe os elementos do array separados por vírgula (por exemplo: 1,2,3,4,5):");
+        let array = entradaArray.split(","); 
+        let elemento = prompt("Informe o novo elemento para inserir no início do array:");
+        let resultado = inserirNoInicio(array, elemento);
+        document.write(`O array original [${entradaArray}] com o elemento "${elemento}" inserido no início é [${resultado}].`);
+    </script>
+</body>
+</html>

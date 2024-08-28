@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inserir Elemento no Final do Array</title>
+</head>
+<body>
+    <h1>Inserir um Novo Elemento ao Final de um Array</h1>
+    <p><cite>Escreva um programa que insere um novo elemento ao final de um array.</cite></p>
+
+    <script>
+        function inserirNoFinal(array, elemento) {
+            array.push(elemento);   /*Usa o método push para adicionar um novo elemento ao final do array*/
+            return array;
+        }
+        console.log(inserirNoFinal([1, 2, 3, 4, 5], 6));        
+        console.log(inserirNoFinal(["a", "b", "c"], "d"));        
+        console.log(inserirNoFinal([10], 20));                    
+    </script>
+
+    <script>
+        let entradaArray = prompt("Informe os elementos do array separados por vírgula (por exemplo: 1,2,3,4,5):");
+        let array = entradaArray.split(",");
+        let elemento = prompt("Informe o novo elemento para inserir ao final do array:");
+        let resultado = inserirNoFinal(array, elemento);
+        document.write(`O array original [${entradaArray}] com o elemento "${elemento}" inserido ao final é [${resultado}].`);
+    </script>
+</body>
+</html>

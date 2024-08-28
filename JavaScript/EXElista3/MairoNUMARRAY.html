@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Encontrar Maior Número do Array</title>
+</head>
+<body>
+    <h1>Encontrar o Maior Número em um Array</h1>
+    <p><cite>Escreva um programa que encontra o maior número em um array.</cite></p>
+
+    <script>
+        function encontrarMaiorNumero(array) {
+            return Math.max(...array); /*Usa Math.max com spread syntax para encontrar o maior número em um array*/
+        }
+        console.log(encontrarMaiorNumero([1, 2, 3, 4, 5]));          
+        console.log(encontrarMaiorNumero([-1, -2, -3, -4, -5]));     
+        console.log(encontrarMaiorNumero([10, 20, 30, 40, 50]));    
+    </script>
+    <script>
+        let entradaArray = prompt("Informe os números do array separados por vírgula (por exemplo: 1,2,3,4,5):");
+        let array = entradaArray.split(",").map(Number);
+        let resultado = encontrarMaiorNumero(array);
+        document.write(`O maior número no array [${array}] é ${resultado}.`);
+    </script>
+</body>
+</html>

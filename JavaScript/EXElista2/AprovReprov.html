@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Classificação de Aluno</title>
+    <script>
+        function classificarAluno(media) {
+            if (media >= 7.0) {
+                return "Aprovado";
+            } else {
+                return "Reprovado";
+            }
+        }
+
+        console.log(classificarAluno(10));    //  "Aprovado"
+        console.log(classificarAluno(7.0));   //  "Aprovado"
+        console.log(classificarAluno(6.95));  //  "Reprovado"
+        console.log(classificarAluno(8.8));   //  "Aprovado"
+        console.log(classificarAluno(0));     //  "Reprovado"
+        console.log(classificarAluno(2.725)); //  "Reprovado"
+    </script>
+</head>
+<body>
+    <h1>Classificação de Aluno</h1>
+    <p><cite>Digite a média do aluno para classificá-lo como "Aprovado" ou "Reprovado".</cite></p>
+
+    <script>
+       
+        let media = parseFloat(prompt("Informe a média do aluno:"));
+        let classificacao = classificarAluno(media);
+        document.write(`A média do aluno é ${media}. O aluno está ${classificacao}.`);
+    </script>
+</body>
+</html>

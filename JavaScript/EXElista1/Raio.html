@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Cálculo do Perímetro do Círculo</title>
+    <script type="text/javascript" src="Lib/Raio.js"> </script>
+        // function circulo(a){
+        //     let resultcirculo = 2 * Math.PI * a;
+        //     return resultcirculo;
+        // }
+        
+        // console.log(circulo(7));
+        // console.log(circulo(10));
+        // console.log(circulo(3.5));    
+        
+</head>
+<body>
+    <h1>Calculadora de Perímetro do Círculo</h1>
+    <p>Este programa solicita o raio de um círculo e exibe o seu perímetro.</p>
+
+    <script>
+        
+        let raio = prompt("Digite o raio do círculo:");    
+        
+        if (raio <= 0 ) 
+            document.write("Digite um número positivo.");
+            
+            const PI = Math.PI; // Math.PI : 
+            let perimetro = 2 * PI * raio;
+
+            document.write(`O perímetro do círculo com raio ${raio} é ${perimetro}`);
+        
+    </script>
+</body>
+</html>

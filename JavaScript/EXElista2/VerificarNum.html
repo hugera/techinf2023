@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Verificar Número</title>
+</head>
+<body>
+    <h1>Verificação de Número</h1>
+    <p><cite>Escreva um programa que solicita um número ao usuário e verifica se ele é positivo, negativo ou zero.</cite></p>
+
+    <script>
+        function verificarNum(numero) {
+            if (numero > 0) {
+                return "positivo";
+            } else if (numero < 0) {
+                return "negativo";
+            } else {
+                return "zero";
+            }
+        }
+
+          console.log(verificarNum(5,"Positivo"));
+          console.log(verificarNum(-3,"Negativo"));
+          console.log(verificarNum(0,"Zero"));
+          console.log(verificarNum("1110","Positivo"));
+          console.log(verificarNum("-987654321","Negativo"));
+
+    </script>
+</body>
+</html>
+    <script>
+        let numero = parseFloat(prompt("Informe um número:"));
+        let resultado = verificarNum(numero);
+        document.write(`O número ${numero} é ${resultado}.`);
+    </script>

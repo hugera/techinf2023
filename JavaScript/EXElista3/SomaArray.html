@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calcular Soma do Array</title>
+</head>
+<body>
+    <h1>Calcular a Soma dos Números de um Array</h1>
+    <p><cite>Escreva um programa que calcula a soma dos números em um array.</cite></p>
+
+    <script> /*Usa o método reduce para calcular a soma dos elementos do array*/
+        function calcularSoma(array) {
+            return array.reduce((acumulador, valorAtual) => acumulador + valorAtual, 0);
+        }
+        console.log(calcularSoma([1, 2, 3, 4, 5]));
+        console.log(calcularSoma([2, 4, 6, 8]));    
+        console.log(calcularSoma([1, 3, 5, 7]));    
+    </script>
+
+    <script>
+        let entradaArray = prompt("Informe os números do array separados por vírgula (por exemplo: 1,2,3,4,5):");
+        let array = entradaArray.split(",").map(Number); /* Converte a string de entrada em um array de números*/
+        let resultado = calcularSoma(array);
+        document.write(`A soma dos números no array [${array}] é ${resultado}.`);
+    </script>
+</body>
+</html>

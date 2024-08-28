@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Encontrar Menor Número</title>
+</head>
+<body>
+    <h1>Encontrar o Menor de Três Números</h1>
+    <p><cite>Escreva um programa que solicita três números ao usuário e encontra o menor entre eles.</cite></p>
+
+    <script>
+        function encontrarMenor(a, b, c) {
+            let menor = a;
+
+            if (b < menor) {
+                menor = b;
+            }
+            if (c < menor) {
+                menor = c;
+            }
+
+            return menor;
+        }
+             console.log(encontrarMenor(3, 7, 5));  // 3
+             console.log(encontrarMenor(-1, -5, -3)); // -5
+             console.log(encontrarMenor(8, 2, 10));  // 2
+      
+    </script>
+</body>
+</html>
+
+     <script>
+        let numero1 = parseFloat(prompt("Informe o primeiro número:"));
+        let numero2 = parseFloat(prompt("Informe o segundo número:"));
+        let numero3 = parseFloat(prompt("Informe o terceiro número:"));
+
+        let menorNumero = encontrarMenor(numero1, numero2, numero3);
+
+        document.write(`O menor número entre ${numero1}, ${numero2} e ${numero3} é ${menorNumero}.`);
+     </script>

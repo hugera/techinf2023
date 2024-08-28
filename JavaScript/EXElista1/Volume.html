@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Volume da Esfera</title>
+    <script type="javascript" src="Lib/Volume.js"></script> 
+        // function volumeesfera(a){
+        //     let resultvolume = (4 * Math.PI * Math.pow(a, 3)) / 3;
+        //     return resultvolume;
+        // }
+        
+        //     console.log(volumeesfera(3));
+        //     console.log(volumeesfera(5));
+        //     console.log(volumeesfera(1.5));      
+       
+</head>
+<body>
+    <h1>Calculadora de Volume da Esfera</h1>
+    <p>Este programa solicita o raio de uma esfera e exibe o seu volume.</p>
+
+    <script>
+        
+        let raio = Number(prompt("Digite o raio da esfera:"));
+           
+        let volume = (4 * Math.PI * Math.pow(raio, 3)) / 3;
+            
+            document.write(`O volume da esfera com raio ${raio} é ${volume}`);  // Calcula o volume da esfera 
+      
+    </script>
+</body>
+</html>

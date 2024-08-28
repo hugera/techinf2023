@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Encontrar Maior Número</title>
+</head>
+<body>
+    <h1>Encontrar o Maior de Três Números</h1>
+    <p><cite>Escreva um programa que solicita três números ao usuário e encontra o maior entre eles.</cite></p>
+
+    <script>
+        function encontrarMaior(a, b, c) {
+            let maior = a;
+
+            if (b > maior) {
+                maior = b;
+            }
+            if (c > maior) {
+                maior = c;
+            }
+
+            return maior;
+        }
+
+        console.log(encontrarMaior(3, 7, 5));  // 7
+        console.log(encontrarMaior(-1, -5, -3)); // -1
+        console.log(encontrarMaior(8, 2, 10));  // 10
+    </script>
+
+    <script>
+        let numero1 = parseFloat(prompt("Informe o primeiro número:"));
+        let numero2 = parseFloat(prompt("Informe o segundo número:"));
+        let numero3 = parseFloat(prompt("Informe o terceiro número:"));
+
+        let maiorNumero = encontrarMaior(numero1, numero2, numero3);
+
+        document.write(`O maior número entre ${numero1}, ${numero2} e ${numero3} é ${maiorNumero}.`);
+    </script>
+</body>
+</html>

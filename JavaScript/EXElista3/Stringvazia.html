@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Verificar String Vazia</title>
+</head>
+<body>
+    <h1>Verificar se uma String é Vazia</h1>
+    <p><cite>Escreva um programa que verifica se uma string é vazia.</cite></p>
+
+    <script>
+        function verifStringVz(string) {                                  
+           return string.trim() === ""; /*.trim() Remove espaços em branco e verifica se a string resultante é vazia*/
+        }
+
+        console.log(verifStringVz(""));      
+        console.log(verifStringVz("hello")); 
+        console.log(verifStringVz(" "));     
+    </script>
+    <script>
+        let entradaUsuario = prompt("Informe uma string:");
+        let resultado = verifStringVz(entradaUsuario);
+        document.write(`A string "${entradaUsuario}" é vazia: ${resultado}.`);
+    </script>
+</body>
+</html>

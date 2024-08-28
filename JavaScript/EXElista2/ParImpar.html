@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Verificar Par ou Ímpar</title>
+    <script>
+        // Função para verificar se um número é par ou ímpar
+        function verificarParOuImpar(numero) {
+            if (numero % 2 === 0) {
+                return "Par";
+            } else {
+                return "Ímpar";
+            }
+        }
+
+      
+           console.log(verificarParOuImpar(4));   // "Par"
+           console.log(verificarParOuImpar(7));   //  "Ímpar"
+           console.log(verificarParOuImpar(0));   //  "Par"
+           console.log(verificarParOuImpar(-5));  // "Ímpar"
+    </script>
+</head>
+<body>
+    <h1>Verificar Par ou Ímpar</h1>
+    <p><cite>Digite um número para verificar se ele é "Par" ou "Ímpar".</cite></p>
+
+    <script>
+        
+        let numero = parseInt(prompt("Informe um número:"), 10);
+        let resultado = verificarParOuImpar(numero);
+        document.write(`O número ${numero} é ${resultado}.`);
+   
+    </script>
+</body>
+</html>
