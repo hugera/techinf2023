@@ -46,7 +46,7 @@
 ## Instalando o GitHub
  - link do site: https://git-scm.com/downloads 
 
-##  Cloando o Repositório
+##  Clonando o Repositório
 
 - comando cd / depois cd desktop
 
