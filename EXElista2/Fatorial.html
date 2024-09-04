@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calcular Fatorial</title>
+</head>
+<body>
+    <h1>Calcular o Fatorial de um Número</h1>
+    <p><cite>Escreva um programa que solicita um número ao usuário e calcula o seu fatorial.</cite></p>
+
+    <script>
+        
+        function calcularFatorial(n) {
+            if (n === 0) return 1;    // Fatorial de 0 é 1
+            let fatorial = 1;
+            for (let i = 1; i <= n; i++) {
+                fatorial *= i;
+            }
+            return fatorial;
+        }
+
+        console.log(calcularFatorial(5));     //  120
+        console.log(calcularFatorial(0));    //  1
+        console.log(calcularFatorial(3));   //  6
+        console.log(calcularFatorial(12)); //  479001600
+    </script>
+
+    <script>
+        let numero = parseInt(prompt("Informe um número para calcular o fatorial:"), 10);
+        let fatorialNumero = calcularFatorial(numero);
+        document.write(`O fatorial de ${numero} é ${fatorialNumero}.`);
+    </script>
+</body>
+</html>

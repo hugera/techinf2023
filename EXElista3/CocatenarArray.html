@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Concatenar Arrays</title>
+</head>
+<body>
+    <h1>Concatenar Dois Arrays</h1>
+    <p><cite>Escreva um programa que concatena dois arrays.</cite></p>
+
+    <script>
+        function concatenarArrays(array1, array2) {
+            return array1.concat(array2);       /*Usa o método concat para concatenar dois arrays*/
+        }
+        console.log(concatenarArrays([1, 2, 3], [4, 5, 6])); 
+        console.log(concatenarArrays(["a", "b"], ["c", "d"])); 
+        console.log(concatenarArrays([], [1, 2, 3]));         
+    </script>
+
+    <script>
+        let entradaArray1 = prompt("Informe os elementos do primeiro array separados por vírgula (por exemplo: 1,2,3):");
+        let array1 = entradaArray1.split(","); 
+        let entradaArray2 = prompt("Informe os elementos do segundo array separados por vírgula (por exemplo: 4,5,6):");
+        let array2 = entradaArray2.split(","); 
+        let resultado = concatenarArrays(array1, array2);
+        document.write(`Os arrays concatenados são: [${resultado}].`);
+    </script>
+</body>
+</html>

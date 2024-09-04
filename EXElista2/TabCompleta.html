@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tabuada Completa</title>
+    <script>
+        
+        function imprimirTabuadaCompleta() {
+            let resultado = '';
+            for (let i = 1; i <= 10; i++) {
+                for (let j = 0; j <= 10; j++) {
+                    resultado += `${i} x ${j} = ${i * j}<br>`;
+                }
+                resultado += '<br>'; // Adiciona uma quebra de linha entre as tabuadas dos diferentes números
+            }
+            return resultado;
+        }
+
+            console.log(imprimirTabuadaCompleta());
+    </script>
+</head>
+<body>
+    <h1>Tabuada Completa da Multiplicação</h1>
+    <p><cite>Veja a tabuada da multiplicação completa de 1 a 10.</cite></p>
+
+    <script>
+        let tabuadaCompleta = imprimirTabuadaCompleta();
+        document.write(tabuadaCompleta);
+    </script>
+</body>
+</html>

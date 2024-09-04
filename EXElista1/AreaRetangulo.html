@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Cálculo da Área do Retângulo</title>
+    <script type="text/javascript" src="Lib/AreaRetangulo.js"></script>
+    //     function arearet(a,b){
+    //         let resultadoarea = a * b
+    //         return resultadoarea;
+    // }
+    //     console.log(arearet(5,10));        
+    //     console.log(arearet(7,3)); 
+    //     console.log(arearet(8,4)); 
+    
+
+</head>
+<body>
+    <h1>Calculadora de Área do Retângulo</h1>
+    <p>Este programa solicita a largura e a altura de um retângulo e exibe a sua área.</p>
+
+    <script>
+       
+        let largura = Number(prompt("Digite a largura do retângulo:"));
+        let altura = Number(prompt("Digite a altura do retângulo:"));
+        let area = largura * altura;
+            document.write(`A área do retângulo com largura ${largura} e altura ${altura} é ${area}`);
+       
+    </script>
+</body>
+</html>

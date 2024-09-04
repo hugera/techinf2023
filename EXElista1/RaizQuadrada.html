@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Raiz Quadrada</title>
+    <script type="text/jacascript" src="Lib/RaizQuadrada.js"></script>
+        // function raiz(a){
+        //     let resultraiz = Math.sqrt(a);
+        //     return resultraiz;
+        // }
+        
+        // console.log(raiz(16,4));
+        // console.log(raiz(9,3));
+        // console.log(raiz(121,11));   
+        
+</head>
+<body>
+    <h1>Calculadora de Raiz Quadrada</h1>
+    <p>Este programa solicita um número ao usuário e exibe a sua raiz quadrada.</p>
+
+    <script>
+                                                  
+        let numero = prompt("Digite um número:");
+        
+        if (numero < 0) 
+            document.write("Insira um número positivo:");
+
+        let raizQuadrada = Math.sqrt(numero);
+            document.write(`A raiz quadrada de ${numero} é ${raizQuadrada}`);
+    </script>
+</body>
+</html>

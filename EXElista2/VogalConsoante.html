@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Verificar Vogal ou Consoante</title>          // indexof verifica se o caractere está na string de vogais.// 
+    <script>                                            // Se indexOf retornar diferente de -1, o caractere é uma vogal;
+                                                       //  caso contrário, é uma consoante.
+
+        function verificarCaractere(caractere) {               
+            let vogais = 'aeiouAEIOU';
+            return (vogais.indexOf(caractere) !== -1) ? 'Vogal' : 'Consoante';
+        }
+
+        console.log(verificarCaractere('a'));  //  Vogal                        
+        console.log(verificarCaractere('b'));  //  Consoante
+        console.log(verificarCaractere('e'));  //  Vogal
+        console.log(verificarCaractere('x'));  //  Consoante
+        console.log(verificarCaractere('Y'));  //  Consoante
+    </script>
+</head>
+<body>
+    <h1>Verificar se um Caractere é uma Vogal ou Consoante</h1>
+    <p><cite>Digite um caractere para verificar se é uma vogal ou consoante.</cite></p>
+
+    <script>
+
+        let caractere = prompt("Informe um caractere:");
+        let resultado = verificarCaractere(caractere);
+        document.write(`O caractere "${caractere}" é ${resultado}.`);
+   
+    </script>
+</body>
+</html>

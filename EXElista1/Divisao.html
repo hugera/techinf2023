@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Divisão Inteira</title>
+    <script type="text/javascript" src="Lib/Divisao.js"> </script>   
+    //     function divisao(a, b){
+    //         let resultado = a / b;
+
+    //         return resultado;
+    // }
+    //         console.log(divisao(10,3));
+    //         console.log(divisao(9,3));
+    //         console.log(divisao(9,2));
+    //         console.log(divisao(7,5));
+    //         console.log(divisao(0,5));
+   
+</head>
+<body>
+    <h1>Divisão Inteira de Dois Números</h1>
+    <p><cite>Escreva um programa que solicita dois números inteiros ao usuário e imprime o resultado da divisão inteira entre eles.</cite></p>
+
+    <script>
+        let numero1 = parseInt(prompt("Informe o primeiro número inteiro:"));
+        let numero2 = parseInt(prompt("Informe o segundo número inteiro:"));
+        
+        let divisaoInteira = (numero1 / numero2);
+        document.write(`A divisão inteira de ${numero1} por ${numero2} é ${divisaoInteira}`);
+    </script>
+</body>
+</html>

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Encontrar Índice em Array</title>
+</head>
+<body>
+    <h1>Encontrar o Índice de um Elemento em um Array</h1>
+    <p><cite>Escreva um programa que encontra o índice de um elemento em um array.</cite></p>
+
+    <script>
+        function encontrarIndice(array, elemento) {
+            return array.indexOf(elemento);  /*utilizado para encontrar o índice da primeira ocorrência de um valor em um array */
+        }
+
+        console.log(encontrarIndice([1, 2, 3, 4, 5], 3));  
+        console.log(encontrarIndice([10, 20, 30, 40, 50], 20)); 
+        console.log(encontrarIndice([5, 10, 15, 20, 25], 25)); 
+    </script>
+
+    <script>
+        let entradaArray = prompt("Informe os elementos do array separados por vírgula (por exemplo: 1,2,3,4,5):");
+        let array = entradaArray.split(",").map(Number); /* Converte a string em um array de números */
+        let elemento = Number(prompt("Informe o elemento para encontrar o índice:"));
+        let resultado = encontrarIndice(array, elemento);
+        document.write(`O índice do elemento ${elemento} no array [${array}] é: ${resultado}.`);
+    </script>
+</body>
+</html>

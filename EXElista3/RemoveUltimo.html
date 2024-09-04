@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Remover Último Elemento do Array</title>
+</head>
+<body>
+    <h1>Remover o Último Elemento de um Array</h1>
+    <p><cite>Escreva um programa que remove o último elemento de um array.</cite></p>
+
+    <script>
+        function removerUltimoElemento(array) {  
+            array.pop();                         /* Usa o método pop para remover o último elemento do array */
+            return array;
+        }
+
+        console.log(removerUltimoElemento([1, 2, 3, 4, 5])); 
+        console.log(removerUltimoElemento(["a", "b", "c"])); 
+        console.log(removerUltimoElemento([10])); 
+    </script>
+
+    <script>
+        
+        let entradaArray = prompt("Informe os elementos do array separados por vírgula (por exemplo: 1,2,3,4,5):");
+        let array = entradaArray.split(","); 
+        let resultado = removerUltimoElemento(array);
+        document.write(`O array original [${entradaArray}] com o último elemento removido é [${resultado}].`);
+    </script>
+</body>
+</html>

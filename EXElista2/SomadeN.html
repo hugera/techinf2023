@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Soma dos Números Até N</title>
+    <script>
+        // Função para calcular a soma dos números de 1 até N
+        function calcularSoma(n) {
+            return (n * (n + 1)) / 2;
+        }
+
+        console.log(calcularSoma(5,15));   // 15
+        console.log(calcularSoma(10,55));  // 55
+        console.log(calcularSoma(1,1));   //  1
+        console.log(calcularSoma(64,2080));  // 2080
+    </script>
+</head>
+<body>
+    <h1>Cálculo da Soma dos Números Até N</h1>
+    <p><cite>Digite um número N para calcular a soma de todos os números inteiros de 1 até N.</cite></p>
+
+    <script>
+        
+        let n = parseInt(prompt("Informe o valor de N:"), 10);
+        let soma = calcularSoma(n);
+        document.write(`A soma de todos os números inteiros de 1 até ${n} é ${soma}.`);
+    </script>
+</body>
+</html>

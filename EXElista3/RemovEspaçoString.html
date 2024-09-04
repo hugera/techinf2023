@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Remover Espaços de uma String</title>
+</head>
+<body>
+    <h1>Remover Todos os Espaços de uma String</h1>
+    <p><cite>Escreva um programa que remove todos os espaços de uma string.</cite></p>
+
+    <script>
+        function removerEspacos(string) {    /*método replace() com uma expressão regular (/\s+/g)*/  
+        return string.replace(/\s+/g, '');  /*remove todos os espaços*/ expressão \s+ corresponde a qualquer espaço em branco /*                                   /*incluindo espaços, tabs e quebras de linha/*
+        }                                 /* g indica que a substituição deve ser feita globalmente em toda a string*/
+
+        console.log(removerEspacos("hello world")); 
+        console.log(removerEspacos(" a b c "));     
+        console.log(removerEspacos(" "));           
+    </script>
+    <script>
+        let entradaUsuario = prompt("Informe uma string:");
+        let resultado = removerEspacos(entradaUsuario);
+        document.write(`A string "${entradaUsuario}" sem espaços é: "${resultado}".`);
+    </script>
+</body>
+</html>

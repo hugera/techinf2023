@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Verificar Ano Bissexto</title>
+    <script>
+        // Função para verificar se um ano é bissexto
+        function Bissexto(ano) {
+            return (ano % 4 === 0 && (ano % 100 !== 0 || ano % 400 === 0));
+        }
+
+        // Testando a função no console
+        console.log(Bissexto(2020)); // Saída: true
+        console.log(Bissexto(2024)); // Saída: true
+        console.log(Bissexto(1999)); // Saída: false
+        console.log(Bissexto(2014)); // Saída: false
+        console.log(Bissexto(2025)); // Saída: false
+        console.log(Bissexto(1900)); // Saída: false
+        console.log(Bissexto(2000)); // Saída: true
+        console.log(Bissexto(2100)); // Saída: false
+    </script>
+</head>
+<body>
+    <h1>Verificar se um Ano é Bissexto</h1>
+    <p><cite>Digite um ano para verificar se é bissexto.</cite></p>
+
+    <script>
+        let ano = parseInt(prompt("Informe um ano:"), 10);
+        let resultado = Bissexto(ano);
+        document.write(`O ano ${ano} ${resultado ? 'é' : 'não é'} bissexto.`);
+    </script>
+</body>
+</html>

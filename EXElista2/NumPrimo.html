@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Verificar Número Primo</title>
+    <script>
+        function ePrimo(numero) {
+            if (numero <= 1) return false;
+            if (numero === 2) return true; // 2 é o único número primo par
+            if (numero % 2 === 0) return false; // Números pares maiores que 2 não são primos
+
+            return true;
+        }
+
+        console.log(ePrimo(7));   //  true
+        console.log(ePrimo(10));  //  false
+        console.log(ePrimo(13));  //  true
+        console.log(ePrimo(0));   //  false
+        console.log(ePrimo(1));   //  false
+        console.log(ePrimo(2));   //  true
+    </script>
+</head>
+<body>
+    <h1>Verificar se um Número é Primo</h1>
+    <p><cite>Digite um número para verificar se ele é primo.</cite></p>
+
+    <script>
+       
+        let numero = parseInt(prompt("Informe um número:"));
+        let resultado = ePrimo(numero);
+        document.write(`O número ${numero} é ${resultado ? "primo" : "não primo"}.`);
+    </script>
+</body>
+</html>

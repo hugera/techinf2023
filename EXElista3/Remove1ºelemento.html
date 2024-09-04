@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Remover Primeiro Elemento do Array</title>
+</head>
+<body>
+    <h1>Remover o Primeiro Elemento de um Array</h1>
+    <p><cite>Escreva um programa que remove o primeiro elemento de um array.</cite></p>
+
+    <script>
+        function removerPrimeiroElemento(array) {
+            array.shift();                          /* Usa o método shift para remover o primeiro elemento do array */
+            return array;
+        }
+        console.log(removerPrimeiroElemento([1, 2, 3, 4, 5])); 
+        console.log(removerPrimeiroElemento(["a", "b", "c"])); 
+        console.log(removerPrimeiroElemento([10]));
+    </script>
+
+    <script>
+        let entradaArray = prompt("Informe os elementos do array separados por vírgula (por exemplo: 1,2,3,4,5):");
+        let array = entradaArray.split(",");             /* Mantém todos os valores como strings */
+        let resultado = removerPrimeiroElemento(array);
+        document.write(`O array original [${entradaArray}] com o primeiro elemento removido é [${resultado}].`);
+    </script>
+</body>
+</html>

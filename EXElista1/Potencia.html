@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Operação de Potência</title>
+    <script type="text/javascript" src="Lib/Potencia.js"></script>  
+        // function potencia(a, b){
+        //     let resultpotencia = a ** b;
+        //     return resultpotencia;
+        // }
+        
+        //     console.log(potencia(2,3));
+        //     console.log(potencia(5,2));
+        //     console.log(potencia(7,0));    
+      
+</head>
+<body>
+    <h1>Calculadora de Potência</h1>
+    <p>Este programa solicita dois números: a base e o expoente, e calcula o resultado da base elevada ao expoente.</p>
+
+    <script>
+        
+        let base = Number(prompt("Digite a base:"));
+        let expoente = Number(prompt("Digite o expoente:"));
+
+       
+        if ((base) || (expoente)) 
+            document.write("Por favor, insira valores numéricos válidos.");
+      
+        let resultado = Math.pow(base, expoente);   // Calcula a potência
+            document.write(`${base} elevado a ${expoente} é igual a ${resultado}`);
+        
+    </script>
+</body>
+</html>

@@ -1,0 +1,10 @@
+
+       function ePalindromo(str) {
+       let strInvertida = str.split('').reverse().join(''); // Inverter a string
+       return str === strInvertida; // Comparar a string original com a invertida
+}
+
+        console.log(ePalindromo("racecar")); 
+        console.log(ePalindromo("hello")); 
+        console.log(ePalindromo("madam")); 
+        

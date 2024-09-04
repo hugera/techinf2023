@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inverter String</title>
+</head>
+<body>
+    <h1>Inverter uma String</h1>
+    <p><cite>Escreva um programa que inverte uma string.</cite></p>
+
+    <script>
+        function inverterString(string) {
+            return string.split('').reverse().join('');/*split('') transforma a string num array onde caractere é um elemento*/
+        }                                              /*reverse() inverte a ordem dos elementos do array*/
+        console.log(inverterString("hello"));          /*join('') reconstrói a string a partir do array invertido*/ 
+        console.log(inverterString("world")); 
+        console.log(inverterString("abc"));   
+    </script>
+    <script>
+        let entradaUsuario = prompt("Informe uma string:");
+        let resultado = inverterString(entradaUsuario);
+        document.write(`A string "${entradaUsuario}" invertida é: "${resultado}".`);
+    </script>
+</body>
+</html>
