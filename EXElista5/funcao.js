@@ -31,12 +31,12 @@ function extractContent(tabela) {
 
 // 5° Função
 
-function rowToJSON(header, content){
+function rowToJSON(header, linha){
     const obj = {}
 
     for (let i = 0; i < header.length; i++){
         let key = header[i];
-        let value = content[i];
+        let value = linha[i];
 
         obj[key] = value;
     }
@@ -45,14 +45,21 @@ function rowToJSON(header, content){
 
 // 6° Função
 
-function columnsToJSON(cabecalho, conteudo) {
-    return conteudo.map(linha => {
-        let json = {};
-        for (let i = 0; i < cabecalho.length; i++) {
-            json[cabecalho[i]] = linha[i];
-        }
-        return json;
+function columnsToJSON(header, content) {
+    return content.map(linha => {
+        return rowToJSON(header, linha)
+    
+
     });
+    
+    
+    
+        //     let json = {};
+    //     for (let i = 0; i < cabecalho.length; i++) {
+    //         json[cabecalho[i]] = linha[i];
+    //     }
+    //     return json;
+    // });
 }
 
 // Procedimento
@@ -81,6 +88,7 @@ function printCSV(csvString) {
     // 5. Imprimir o objeto JSON usando console.table
     console.table(jsonData);
 }
+
 
 
 module.exports = { csvToLines, linesToColumns, comparar, extractHeader, extractContent, rowToJSON, columnsToJSON, printCSV};
