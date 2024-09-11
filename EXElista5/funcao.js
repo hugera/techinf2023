@@ -62,33 +62,51 @@ function columnsToJSON(header, content) {
     // });
 }
 
-// Procedimento
+// // Procedimento
 
-function printCSV(csvString) {
+// function printCSV(csvString) {
+    
+//     // 1. Dividir o CSV em linhas
+//     const linhas = csvString.split('\n');
+    
+//     // 2. Transformar as linhas em colunas (usando a função linesToColumns)
+//     const tabela = linhas.map(linha => linha.split(';'));
+    
+//     // 3. Extrair o cabeçalho e o conteúdo
+//     const cabecalho = tabela[0];  // Primeira linha é o cabeçalho
+//     const conteudo = tabela.slice(1);  // Restante são os dados
+    
+//     // 4. Converter o conteúdo para JSON (usando a função columnsToJSON)
+//     const jsonData = conteudo.map(linha => {
+//         let json = {};
+//         for (let i = 0; i < cabecalho.length; i++) {
+//             json[cabecalho[i]] = linha[i];
+//         }
+//         return json;
+//     });
+    
+//     // 5. Imprimir o objeto JSON usando console.table
+//     console.table(jsonData);
+// }
+
+function printCSV(texto) {
     
     // 1. Dividir o CSV em linhas
-    const linhas = csvString.split('\n');
+    const linhas = csvToLines(texto);
     
     // 2. Transformar as linhas em colunas (usando a função linesToColumns)
-    const tabela = linhas.map(linha => linha.split(';'));
+    const tabela = linesToColumns(linhas);
     
     // 3. Extrair o cabeçalho e o conteúdo
-    const cabecalho = tabela[0];  // Primeira linha é o cabeçalho
-    const conteudo = tabela.slice(1);  // Restante são os dados
+    const cabecalho = extractHeader(tabela);  // Primeira linha é o cabeçalho
+    const conteudo = extractContent(tabela);  // Restante são os dados
     
     // 4. Converter o conteúdo para JSON (usando a função columnsToJSON)
-    const jsonData = conteudo.map(linha => {
-        let json = {};
-        for (let i = 0; i < cabecalho.length; i++) {
-            json[cabecalho[i]] = linha[i];
-        }
-        return json;
-    });
+    const jsonData =  columnsToJSON(cabecalho, conteudo);
+       
     
     // 5. Imprimir o objeto JSON usando console.table
     console.table(jsonData);
 }
-
-
 
 module.exports = { csvToLines, linesToColumns, comparar, extractHeader, extractContent, rowToJSON, columnsToJSON, printCSV};
