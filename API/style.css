@@ -41,3 +41,8 @@ main{
     box-sizing: border-box;
 
 }
+
+.info{
+    font-size: 30px;
+    color: white;
+}
