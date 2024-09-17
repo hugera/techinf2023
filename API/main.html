@@ -45,11 +45,16 @@
                 const id = `carta${i+1}`;
                 
                 const card = document.getElementById(id);
-                const img = document.createElement('img');
-                img.setAttribute('src', cards[i].image);
-                card.append(img);
+                let img = card.querySelector('img')
+                
+                if(img == null){
+                    img = document.createElement('img');      
             }
-
+               img.setAttribute('src', cards[i].image);
+               card.append(img);
+            
+        }
+            
             // const card1 = document.getElementById('carta1');
             // const img = document.createElement('img');
             // img.setAttribute('src', cards[0].image);
