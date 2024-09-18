@@ -1,3 +1,13 @@
+let deckID = "6efwkrv87lp2";
+
+function novoDeck(){
+    fetch("https://deckofcardsapi.com/api/deck/new/shuffle/?cards=4C,7H,AS,7D,3C,3H,3S,3D,2C,2H,2S,2D,AC,AH,AD,KC,KH,KS,KD,QC,QH,QS,QD,JC,JH,JS,JD")
+    .then(getJsonData)
+    .then(function(jsonData){
+        deckID = jsonData.deck_id;
+    })
+}
+
 function getJsonData(respostaAPI){
     const json = respostaAPI.json();
     return json;    
@@ -20,8 +30,9 @@ function atualizaInfo(jsonData){
 } 
 
 function Reembaralhar(){
-    fetch("https://deckofcardsapi.com/api/deck/8acrl9s6p501/shuffle/?remaining=false")
+    fetch(`https://deckofcardsapi.com/api/deck/${deckID}/shuffle/?remaining=false`)
     .then(getJsonData)
+    .then(atualizaInfo)
     .then(function(jsonData){
         console.log = (jsonData);
         if(jsonData.success){
@@ -52,9 +63,11 @@ function puxarCartas(jsonData){
 
 function olharCartas(){
 
-    fetch("https://deckofcardsapi.com/api/deck/8acrl9s6p501/draw/?count=3")
+    fetch(`https://deckofcardsapi.com/api/deck/${deckID}/draw/?count=3`)
     .then(getJsonData)
     .then(atualizaInfo)
     .then(puxarCartas)
+   
+    
 
 } 
