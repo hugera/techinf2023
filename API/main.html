@@ -32,72 +32,59 @@
     </main>
     <script>
              
-       function olharCartas(){
+        function Reembaralhar(){
+            fetch("https://deckofcardsapi.com/api/deck/8acrl9s6p501/shuffle/?remaining=false")
+            .then(function(respostaAPI){
+                const json = respostaAPI.json();
+                return json;    
+            }).then(function(jsonData){
+                console.log = (jsonData);
+                if(jsonData.success){
+                    alert("Baralho Reembaralhado")
+                }      
+            
+            })
+            
+            
+        }   
+                               
+        function olharCartas(){
+        
+            fetch("https://deckofcardsapi.com/api/deck/8acrl9s6p501/draw/?count=3")
+           .then(function(respostaAPI){
+                const json = respostaAPI.json();
+                return json;
+            }).then(function(jsonData){
+                const cards = jsonData.cards;
+
+                for(let i=0; i<3; i++){
+                    const id = `carta${i+1}`;
+                    
+                    const card = document.getElementById(id);
+                    let img = card.querySelector('img')
+                    
+                    if(img == null){
+                        img = document.createElement('img');      
+                }
+                img.setAttribute('src', cards[i].image);
+                card.append(img);
+                
+            }                
+            
+            const deck_id = jsonData.deck_id;
+            const remaining = jsonData.remaining;
+            
+            const info1 = document.getElementById("deck_id");
+            const info2 = document.getElementById("remaining");   
+            
+            info1.innerText = deck_id;
+            info2.innerText = remaining;
+
+                return cards;
+            })
+        
+        } 
        
-        fetch("https://deckofcardsapi.com/api/deck/8acrl9s6p501/draw/?count=3")
-       .then(function(respostaAPI){
-            const json = respostaAPI.json();
-            return json;
-        }).then(function(jsonData){
-            const cards = jsonData.cards;
-
-            for(let i=0; i<3; i++){
-                const id = `carta${i+1}`;
-                
-                const card = document.getElementById(id);
-                let img = card.querySelector('img')
-                
-                if(img == null){
-                    img = document.createElement('img');      
-            }
-               img.setAttribute('src', cards[i].image);
-               card.append(img);
-            
-        }
-            
-            // const card1 = document.getElementById('carta1');
-            // const img = document.createElement('img');
-            // img.setAttribute('src', cards[0].image);
-            // card1.append(img);
-            
-            // const card2 = document.getElementById('carta2');
-            // const img2 = document.createElement('img');
-            // img2.setAttribute('src', cards[1].image);
-            // card2.append(img2);
-            
-            // const card3 = document.getElementById('carta3');
-            // const img3 = document.createElement('img');
-            // img3.setAttribute('src', cards[2].image);
-            // card3.append(img3);
-
-             
-           const deck_id = jsonData.deck_id;
-           const remaining = jsonData.remaining;
-
-           const info1 = document.getElementById("deck_id");
-           const info2 = document.getElementById("remaining");
-           
-           info1.innerText = deck_id;
-           info2.innerText = remaining;
-
-            return cards;
-        })
-       } 
-       function Reembaralhar(){
-        fetch("https://deckofcardsapi.com/api/deck/8acrl9s6p501/shuffle/?remaining=false")
-        .then(function(respostaAPI){
-            const json = respostaAPI.json();
-            return json;    
-        }).then(function(jsonData){
-            console.log = (jsonData);
-            if(jsonData.success){
-                alert("Baralho Reembaralhado")
-            }      
-         
-        })
-           
-           
-       }
        
     </script>
 
