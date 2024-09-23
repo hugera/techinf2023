@@ -31,6 +31,7 @@ const deck = new Deck(deckID);
         })
 
     }
+   
     this.novoDeck = function(){
         fetch(`https://deckofcardsapi.com/api/deck/new/shuffle/?cards=${this.listofcards}`)
         .then(getJsonData)
