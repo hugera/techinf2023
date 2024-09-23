@@ -1,8 +1,7 @@
 let deckID = "6efwkrv87lp2";
 
 const deck = new Deck(deckID);
-
-     
+      
      /* Métodos Públicos */
 
 
